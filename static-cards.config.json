@@ -1,0 +1,22 @@
+{
+  "outputDir": "public/cards",
+  "cards": [
+    {
+      "endpoint": "stats",
+      "output": "stats.svg",
+      "query": {
+        "username": "jj1guj",
+        "show_icons": "true",
+        "count_private": "true"
+      }
+    },
+    {
+      "endpoint": "top-langs",
+      "output": "top-langs.svg",
+      "query": {
+        "username": "jj1guj",
+        "layout": "compact"
+      }
+    }
+  ]
+}

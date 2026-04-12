@@ -1,0 +1,42 @@
+name: Generate Static Cards
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */12 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+
+      - name: Setup Node
+        uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
+        with:
+          node-version: 22.x
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate static cards
+        env:
+          PAT_1: ${{ secrets.PAT_1 }}
+        run: node scripts/generate-static-cards.js
+
+      - name: Commit generated cards
+        run: |
+          if [ -n "$(git status --porcelain public/cards static-cards.config.json)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add public/cards static-cards.config.json
+            git commit -m "chore: refresh static cards"
+            git push
+          else
+            echo "No changes to commit"
+          fi
