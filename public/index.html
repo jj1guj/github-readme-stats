@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Readme Stats Showcase</title>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #0f172a;
+        --card-bg: #ffffff;
+        --card-border: rgba(15, 23, 42, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Space Grotesk", "Hiragino Kaku Gothic ProN", sans-serif;
+        color: var(--ink);
+        background: #ffffff;
+        display: grid;
+        place-items: center;
+        padding: 32px 20px;
+      }
+
+      main {
+        width: min(1100px, 100%);
+      }
+
+      h1 {
+        margin: 0 0 10px;
+        font-size: clamp(1.9rem, 2.6vw, 2.8rem);
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        justify-items: center;
+        align-items: start;
+        gap: 18px;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 500px;
+        justify-self: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      .card img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+      }
+
+      @media (max-width: 760px) {
+        .cards {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>GitHub Readme Stats</h1>
+
+      <section class="cards" aria-label="GitHub cards preview">
+        <figure class="card">
+          <img src="./cards/stats.svg" alt="GitHub stats card" />
+        </figure>
+        <figure class="card">
+          <img src="./cards/top-langs.svg" alt="GitHub top languages card" />
+        </figure>
+      </section>
+    </main>
+  </body>
+</html>
