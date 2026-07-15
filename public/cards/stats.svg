@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">JJ1GUJ's GitHub Stats, Rank: A-</title>
-        <desc id="descId">Total Stars Earned: 35, Total Commits  (last year) : 740, Total PRs: 162, Total Issues: 152, Contributed to (last year): 4</desc>
+        <desc id="descId">Total Stars Earned: 35, Total Commits  (last year) : 740, Total PRs: 163, Total Issues: 153, Contributed to (last year): 4</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 87.3269348361968;
+        stroke-dashoffset: 87.22691194976503;
       }
     }
   
@@ -192,7 +192,7 @@
         x="219.01"
         y="12.5"
         data-testid="prs"
-      >162</text>
+      >163</text>
     </g>
   </g><g transform="translate(0, 75)">
     <g class="stagger" style="animation-delay: 900ms" transform="translate(25, 0)">
@@ -207,7 +207,7 @@
         x="219.01"
         y="12.5"
         data-testid="issues"
-      >152</text>
+      >153</text>
     </g>
   </g><g transform="translate(0, 100)">
     <g class="stagger" style="animation-delay: 1050ms" transform="translate(25, 0)">
